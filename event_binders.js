@@ -3,7 +3,7 @@ $( function () {
 		event.preventDefault();
 		var data = $(event.target).serializeArray();
 		$("#result").html(data);
-		var inputArr = data[0].value.split(",");
+		var inputArr = data[0].value.split(" ");
 		inputArr.forEach(function (curVal, idx, arr) {
 			arr[idx] = parseInt(curVal);
 		});
