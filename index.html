@@ -3,8 +3,14 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Visualizing Algorithms</title>
-		<link rel="stylesheet" type="text/css" href="theme.css">
+		<!-- jQuery -->
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Boostrap CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!-- Bootstrap javascript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="theme.css">
 		<script type="text/javascript" src="./binary_search.js"></script>
 		<script type="text/javascript" src="./event_binders.js"></script>
 	</head>
@@ -20,6 +26,21 @@
 		<div id="search-area"></div>
 		<div id="checking-el"></div>
 		<div id="result"></div>
-		<canvas id="canvas" width="600" height="200"></canvas>
+		<canvas id="canvas" width="600" height="100"></canvas>
+
+		<h3>A Bit about Binary Search</h3>
+		<p>
+			Binary search is an extremely fast algorithm for finding the positions of an element in a sorted array. It takes as input a sorted array and a target value. The algorithm uses a recursive approach to half the size of the problem with each iteration, while performing constant amount of work on each iteration. In the end, the algorithm return the array index of where the target appears (if the target appears multiple times in the array, there is no guarantee to which of these targets is found). If the target appears nowhere in the array, Binary Search will return a value that shows the target was not found (in many implementations it returns a value of -1). The worst case running time is O(log(n)).
+		</p>
+		<h3>How Does it Work?</h3>
+		<p>
+			Binary Search is a recursive algorithm. The algorithm will keep searching on smaller and smaller arrays until it finds what it is looking for. The base case arrises when the target is not in the array; the array being searched will shrink so small that it has 0 elements. If at any point the target element is found, the algorithm returns that index an no more recursive calls are made.
+		</p>
+		<p>
+			An easy way to code binary search is to keep track of a starting index and an ending index of what section of the input array is currently being searched. The default starting value is that the beginning index is 0, the first element of the array, and the ending index is array.length - 1, the last element of the array.
+		</p>
+		<p>
+			The next step is to find the middle index between the start and end indices. We then compare the element of the array in this middle position to our target. If our target is less than the middle element, we can ignore everything on the right side of our sorted array because all of those element will be guaranteed to be bigger than our target, we then recurse on the left side of the array. To do this we simply change what our start and end indices are. Similarly if the mid element is less than the target. If the mid element turns out to be equal to our target, then we have found what we are looking for and we return the mid index.
+		</p>
 	</body>
 </html>
