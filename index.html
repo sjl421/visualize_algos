@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Visualizing Algorithms</title>
+		<link rel="stylesheet" type="text/css" href="theme.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script type="text/javascript" src="./binary_search.js"></script>
+		<script type="text/javascript" src="./event_binders.js"></script>
+	</head>
+	<body>
+		<form class="form" action="index.html" method="post">
+			<label for="array">Enter numerical array values separated by commas</label>
+  			<input type="text" id="array" name="array" value=""><br>
+			<label for="target">Enter a value to search for</label>
+  			<input type="text" id="target" name="target" value=""><br>
+			<input type="submit" value="Submit">
+		</form>
+		<button type="button" id="step" name="step">Step</button>
+		<div id="search-area"></div>
+		<div id="checking-el"></div>
+		<div id="result"></div>
+		<canvas id="canvas" width="600" height="200"></canvas>
+	</body>
+</html>
