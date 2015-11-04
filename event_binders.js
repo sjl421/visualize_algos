@@ -10,7 +10,7 @@ $( function () {
 		var target = parseInt(data[1].value);
 
 		var bsArray = new BSarray(inputArr, target);
-		bsArray.fillDivs();
+		bsArray.fillDivs(null);
 		bsArray.draw();
 		$("#step").on("click", function (event) {
 			var result = bsArray.step();

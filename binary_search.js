@@ -5,6 +5,7 @@ $(function () {
 		this.endPos = arr.length - 1;
 		this.midIdx = Math.floor((this.startPos + this.endPos) / 2);
 		this.target = target;
+		this.recursiveCalls = 0;
 	};
 
 	BSarray.prototype.step = function () {
@@ -22,6 +23,7 @@ $(function () {
 			this.startPos = this.midIdx + 1;
 		}
 		this.midIdx = Math.floor((this.startPos + this.endPos) / 2);
+		this.recursiveCalls++;
 		return null;
 	};
 
@@ -78,14 +80,15 @@ $(function () {
 	BSarray.prototype.fillDivs = function (stepResult) {
 		$('#search-area').html("Search narrowed to " + (this.endPos - this.startPos + 1) + " elements from startIdx " + this.startPos + " to endIdx " + this.endPos + ".");
 		$('#checking-el').html("Currently checking element at index " + this.midIdx + ".");
+		$('#num-calls').html(this.recursiveCalls);
 
 		$result = $('#result');
 		if (stepResult === null) {
-			$result.html("Result: Still looking");
+			$result.html("Still looking...");
 		} else if (stepResult == -1) {
-			$result.html("Result: Item not found");
+			$result.html("Terminated, item not found.");
 		} else {
-			$result.html("Result: Target found at index " + this.midIdx + ".");
+			$result.html("Terminated, target found at index " + this.midIdx + ".");
 		}
 	};
 });

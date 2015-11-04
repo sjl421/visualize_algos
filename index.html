@@ -15,18 +15,30 @@
 		<script type="text/javascript" src="./event_binders.js"></script>
 	</head>
 	<body>
-		<form class="form" action="index.html" method="post">
-			<label for="array">Enter numerical array values separated by spaces</label>
-  			<input type="text" id="array" name="array" value="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"><br>
-			<label for="target">Enter a value to search for</label>
-  			<input type="text" id="target" name="target" value="20"><br>
-			<input type="submit" value="Submit">
-		</form>
-		<button type="button" id="step" name="step">Step</button>
-		<div id="search-area"></div>
-		<div id="checking-el"></div>
-		<div id="result"></div>
-		<canvas id="canvas" width="600" height="100"></canvas>
+		<h1>Binary Search</h1>
+		<div class="input-holder">
+			<h2>Input</h2>
+			<form class="form" action="index.html" method="post">
+				<label for="array">Enter numerical array values separated by spaces</label>
+	  			<input type="text" id="array" name="array" value="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"><br>
+				<label for="target">Enter a value to search for</label>
+	  			<input type="text" id="target" name="target" value="20"><br>
+				<input type="submit" value="Submit" class="btn">
+			</form>
+		</div>
+		<div class="results-holder">
+			<h2>Results</h2>
+			<div class="results-text">
+				<p><b>Search Area: </b><span id="search-area"></span></p>
+				<p><b>Current Element of Interest: </b><span id="checking-el"></span></p>
+				<p><b>Current Status: </b><span id="result"></span></span></p>
+				<p><b>Number of Recursive Calls: </b><span id="num-calls"></span></span></p>
+
+
+			</div>
+			<button type="button" class="btn" id="step">Step</button>
+			<canvas id="canvas" width="600" height="100"></canvas>
+		</div>
 
 		<h3>A Bit about Binary Search</h3>
 		<p>
