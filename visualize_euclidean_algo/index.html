@@ -11,22 +11,22 @@
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="theme.css">
-		<script type="text/javascript" src="./binary_search.js"></script>
+		<script type="text/javascript" src="./euclidean_gcd.js"></script>
 		<script type="text/javascript" src="./event_binders.js"></script>
 	</head>
 	<body>
-		<h1>Binary Search</h1>
+		<h1>Euclidean Algorithm to find Greatest Common Denominator</h1>
 		<div class="holder input">
 			<h2>Input</h2>
 			<form class="form" action="index.html" method="post">
-				<label >Enter integer array values separated by spaces
+				<label>Enter first integer
 					<br/>
-	  				<input type="text" name="array" value="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31">
+	  				<input type="text" name="target" value="448">
 				</label>
 				<br/>
-				<label>Enter a value to search for
+				<label>Enter second integer
 					<br/>
-	  				<input type="text" name="target" value="20">
+	  				<input type="text" name="target" value="564">
 				</label>
 				<br/>
 				<input type="submit" value="Submit" class="btn">
@@ -35,9 +35,10 @@
 		<div class="holder results">
 			<h2>Results</h2>
 			<div class="results-text">
-				<p><b>Search Area: </b><span id="search-area"></span></p>
-				<p><b>Current Element of Interest: </b><span id="checking-el"></span></p>
-				<p><b>Current Status: </b><span id="result"></span></span></p>
+				<p><b>Larger Number: </b><span id="larger-num"></span></p>
+				<p><b>Smaller Number: </b><span id="smaller-num"></span></p>
+				<p><b>Remainder: </b><span id="remainder"></span></span></p>
+				<p><b>GCD: </b><span id="GCD"></span></span></p>
 				<p><b>Number of Recursive Calls: </b><span id="num-calls"></span></span></p>
 
 
